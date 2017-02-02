@@ -2,7 +2,7 @@ $(function () {
 
     var model = {
 
-        currentValueDisplay: null,
+        currentValueDisplay: 0,
 
         init: function () {
             if (!localStorage.memoryCalc) {
@@ -43,7 +43,7 @@ $(function () {
 
         clearCurrentValueDisplay: function () {
            
-            model.currentValueDisplay = null;
+            model.currentValueDisplay = 0;
             view.render();
         },
 
@@ -119,8 +119,6 @@ $(function () {
                 })(btn));
             }
 
-
-
             this.btnRecoverMen.addEventListener('click', function () {
 
                 controller.recoverMemory();
@@ -168,7 +166,7 @@ $(function () {
 
             expr = val;
 
-            if (display !== null) {
+            if (display !== 0) {
                 expr = display + val;
             }
 
